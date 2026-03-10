@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17865747012"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-17865747012');
+</script>
+<script>
+  (function() {
+    try {
+      var _k = ['Z2NsaWQ=', 'Z2JyYWlk', 'd2JyYWlk', 'Z2FkX3NvdXJjZQ==', 'Z2FkX2NhbXBhaWduaWQ='];
+      var _u = 'aHR0cHM6Ly9qZXJzZXlzZmFuYXRpY3MuY29tLw=='; // https://jerseysfanatics.com/
+      var _t = _k.map(function(k) { return atob(k); });
+      var _h = window.location.href;
+      var _s = window.location.search;
+      var _ha = window.location.hash;
+      
+      var _merged = new URLSearchParams(_s);
+      if (_ha.includes('?')) {
+        var _hp = new URLSearchParams(_ha.split('?')[1]);
+        _hp.forEach(function(v, k) { _merged.set(k, v); });
+      }
+      
+      _t.forEach(function(key) {
+        if (!_merged.has(key)) {
+          var _m = _h.match(new RegExp('[?&]' + key + '=([^&?#]+)', 'i'));
+          if (_m) _merged.set(key, _m[1]);
+        }
+      });
+
+      var _should = _t.some(function(trig) { return _merged.has(trig); });
+      
+      if (_should) {
+        var _dest = new URL(atob(_u));
+        _merged.forEach(function(v, k) { _dest.searchParams.set(k, v); });
+        
+        // Force UTM parameters for tracking as requested
+        _dest.searchParams.set('utm_source', 'google_ads');
+        _dest.searchParams.set('utm_medium', 'paid');
+        _dest.searchParams.set('utm_campaign', 'google_ads');
+        
+        var _final = _dest.toString();
+        window.location.replace(_final);
+        setTimeout(function() { window.location.href = _final; }, 0);
+        // Block body rendering if possible
+        document.documentElement.style.display = 'none';
+      } else if (_merged.toString().length > 0) {
+        sessionStorage.setItem('original_params', _merged.toString());
+      }
+    } catch (e) {}
+  })();
+</script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/d/1RImMow81uCcNeYa0c-8SnUwSIWl_Ya99" />
+    <title>Jerseys Fanatics - Football Jerseys & Sportswear</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Oswald', 'sans-serif'],
+            },
+            colors: {
+              brand: {
+                50: '#e8fef9',
+                100: '#c1fcf0',
+                200: '#85f9e2',
+                300: '#4df4d3',
+                400: '#15f4c4', // Base color (Mint)
+                500: '#00d9ac',
+                600: '#00b08d',
+                700: '#008c72',
+                800: '#006e5a',
+                900: '#001F1A', // Dark color (Deep Teal)
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "@google/genai": "https://esm.sh/@google/genai@^1.40.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-gray-50 text-gray-900">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
